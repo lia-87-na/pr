@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+.tare_block {
+    width: 90%;
+    height: 98%;
+    border: solid blue;
+    @include flex();
+   
+    // justify-content: space-around;
+
+
+    .service {
+        width: $width;
+        height: $height;
+        border: solid red;
+        @include flex();
+
+
+        .service_block {
+            width: 100%;
+            height: 100%;
+            border: solid;
+
+            &:hover {
+                background-position: bottom;
+            }
+
+
+        }
+
+        >p {
+            color: white;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .tare_block {
+
+        .service {
+            width: 150px;
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .tare_block {
+        justify-content: center;
+
+        .service {
+            width: 120px;
+            height: 120px;
+
+            >p {
+                font-size: 12px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,23 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+
+
+.slide {
+    height: 100%;
+    @include flex();
+    justify-content: space-between;
+  
+    opacity: .969;
+
+    p {
+        padding: 8px 20px;
+        border: none;
+ 
+        opacity: .5;
+
+        svg {
+            font-size: 32px;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+footer {
+    width: 100%;
+    height: 50vh;
+   
+    @include flex();
+
+
+    .section {
+        width: 90%;
+        height: 100%;
+        @include flex();
+        flex-direction: column;
+        background-color: $rgb;
+
+        .footer_content {
+            width: 80%;
+            height: 30vh;
+        
+            @include flex();
+            flex-wrap: nowrap;
+
+            .footer_childe {
+                width: 235px;
+                height: 163px;
+          
+                @include flex();
+            }
+
+            >:nth-child(1) {
+                .logo {
+                    width: 70px;
+                    min-width: 70px;
+                    height: 70px;
+
+                    a>img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            >:nth-child(2) {
+                ul {
+                    list-style-type: none;
+                   margin: 0;
+                   padding: 0;
+
+                    li {
+                         transition: .5s ;
+                         margin: 0;
+                          padding: 0;
+                        a {
+                            text-decoration: none;
+                            text-transform: capitalize;
+                             color: white;
+                        }
+
+                        &:hover {
+
+                            color: $rgb;
+                            text-shadow: 1px 1px 1.5px white;
+                            transform: scale(1.1);
+
+
+                            a {
+                                color: white;
+
+                            }
+
+                        }
+
+                    }
+                }
+            }
+
+            >:nth-child(3) {
+
+                >p {
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 500;
+                    color: white;
+                    transition: .5s;
+
+                    &:hover {
+
+                        color: $rgb;
+                        text-shadow: 1px 1px 1.5px white;
+                        transform: scale(1.1);
+
+
+                        svg {
+                            color: white;
+
+                        }
+
+                    }
+                }
+
+                .icons {
+                    width: 100%;
+                    height: 9vh;
+                
+                    @include flex();
+                    justify-content: space-evenly;
+                    flex-grow: 1;
+
+                    a {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        color: #1092f3;
+
+                        svg {
+                            font-size: 20px;
+
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .code_li {
+            width: 80%;
+            height: 10vh;
+        
+            @include flex();
+
+            .compania {
+                width: 180px;
+                height: 100%;
+          
+                @include flex();
+                justify-content: space-between;
+
+                a>img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+                sub{
+                    text-transform: capitalize;
+                     color: white;
+                }
+            }
+        }
+    }
+}

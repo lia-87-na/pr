@@ -1,0 +1,97 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+
+.header {
+    width: 100%;
+    height: 80px;
+     padding: 0 20px;
+    background-color: rgba(250, 250, 250, 0.969);
+    box-shadow: 0 1px 2px 1px $rgb;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    @include flex();
+
+
+    .header_section {
+        width: 90%;
+        @include flex();
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        .logo {
+            width: 70px;
+            min-width: 70px;
+            height: 70px;
+
+            a>img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .menu {
+            width: 800px;
+            height: 70px;
+
+            @include flex();
+            justify-content: flex-end;
+
+            .icon_logo {
+                width: 50px;
+                height: 50px;
+
+
+                // @include flex();
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                font-weight: 900;
+                color: $rgb;
+                display: none;
+
+                &:hover {
+                    background-color: $rgb;
+                    color: white;
+                }
+            }
+
+            .header_menu {
+                width: 500px;
+                height: 50px;
+
+
+                ul {
+                    width: 100%;
+                    @include flex();
+                    list-style-type: none;
+
+                    li {
+                        width: 135px;
+
+                        padding: 7px 0;
+                        text-align: center;
+
+                        a {
+                            text-decoration: none;
+                            text-transform: capitalize;
+                            color: $rgb;
+
+                        }
+
+                        &:hover {
+                            background-color: $rgb;
+
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

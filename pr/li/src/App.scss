@@ -1,0 +1,168 @@
+@import './style/header.scss';
+@import './style/variables.scss';
+@import './style/mixins.scss';
+@import './style/main.scss';
+@import './style/foofer.scss';
+//  @import './style/tareBlock.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:700px) {
+  .header .header_section {
+    flex-wrap: wrap;
+    position: relative;
+
+    .menu {
+      width: 100%;
+      height: 100vh;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 0;
+
+      .icon_logo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 67px;
+        height: 67px;
+        display: block;
+
+        svg {
+          margin: 20px;
+
+        }
+      }
+
+      .header_menu {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 85vh;
+        @include flex();
+        flex-direction: column;
+        background-color: $rgb;
+        display: none;
+
+        ul {
+
+
+          margin: 0;
+          padding: 0;
+
+          li {
+            width: 100%;
+            padding: 20px 0;
+
+
+            a {
+              color: white;
+              font-size: 25px;
+              font-weight: 900;
+            }
+          }
+
+        }
+      }
+
+      .active {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:540px) {
+  .header .header_section .menu {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:580px) {
+
+  .slide,
+  .info .container {
+    width: 70%;
+    min-width: 200px;
+  }
+
+}
+
+@media screen and (max-width:768px) {
+  footer {
+    height: auto;
+
+    .section {
+      height: auto;
+
+      .footer_content {
+        height: auto;
+        flex-wrap: wrap;
+
+        .footer_childe {
+          height: 16.1vh;
+        }
+
+        >:nth-child(3) {
+          flex-grow: 1;
+
+          .icons {
+            height: auto;
+          }
+        }
+
+      }
+
+      .code_li {
+
+
+        .compania {
+          width: 50px;
+          height: 7vh;
+
+
+          a>img {
+            width: 100%;
+            height: 100%;
+          }
+
+        }
+
+        sub {
+          display: none;
+        }
+
+      }
+    }
+  }
+     .routMenu {
+       .priceList {
+         .parent {
+           .parent_content {
+             height: 60vh;
+              width: 100%;
+           }
+         }
+       }
+     }
+}
+
+
+
+
+
+@media screen and (max-width:400px) {
+  .routMenu {
+    .priceList {
+      .parent {
+        width: 100%;
+        .parent_content{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
